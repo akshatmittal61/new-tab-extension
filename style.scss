@@ -49,6 +49,7 @@ body {
     background-position: center;
     background-blend-mode: lighten;
     background-color: rgba(255, 255, 255, 0.5);
+    color: var(--tcolor);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -130,6 +131,71 @@ body {
                 background-color: rgba(255, 255, 255, 0.1);
             }
         }
+    }
+}
+
+.full-screen-btn {
+    all: unset;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+
+    span {
+        font-size: 20px;
+        line-height: 150%;
+    }
+}
+
+.screen-saver {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+    transition: all 0.3s ease-in-out;
+
+    &-invisible {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-time {
+        width: 100vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 150px;
+        line-height: 125%;
+        font-weight: 100;
+        user-select: none;
+        font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 }
 
