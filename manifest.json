@@ -1,0 +1,26 @@
+{
+    "name": "New Tab",
+    "description": "New Tab Page",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "bookmarks",
+        "history",
+        "topSites",
+        "contextMenus",
+        "notifications",
+        "alarms",
+        "identity",
+        "identity.email",
+        "identity.read",
+        "identity.launchWebAuthFlow",
+        "identity.profile.emails.read",
+        "identity.profile.read",
+        "identity.profile"
+    ]
+}
