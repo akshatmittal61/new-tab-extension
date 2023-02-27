@@ -3,6 +3,7 @@ const _date = document.querySelector(".date");
 const fullScreenBtn = document.querySelector(".full-screen-btn");
 const screenSaver = document.querySelector(".screen-saver");
 const screenSaverTime = document.querySelector(".screen-saver-time");
+const searchForm = document.querySelector("form.search");
 
 const days = [
 	"Sunday",
@@ -64,4 +65,11 @@ document.addEventListener("fullscreenchange", () => {
 	console.log("fullscreenchange", screenSaver.classList);
 	screenSaver.classList.toggle("screen-saver-visible");
 	screenSaver.classList.toggle("screen-saver-invisible");
+});
+
+searchForm.addEventListener("submit", (e) => {
+	e.preventDefault();
+	const searchInput = searchForm.querySelector("input");
+	const searchValue = searchInput.value;
+	window.location.href = `https://www.google.com/search?q=${searchValue}`;
 });
