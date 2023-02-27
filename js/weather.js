@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
 						img.src = iconUrl;
 						iconContainer.appendChild(img);
 					}
-					console.log(data);
 				});
 		});
 	} else {
