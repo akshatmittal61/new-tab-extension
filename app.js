@@ -38,14 +38,14 @@ const setTime = () => {
 	const Minutes = time.getMinutes();
 	const Seconds = time.getSeconds();
 	_time.innerHTML = `
-${Hours} :
+${Hours < 10 ? `0${Hours}` : Hours} :
 ${Minutes < 10 ? `0${Minutes}` : Minutes}
 `;
 	_date.innerHTML = `
 ${days[Day]} , ${months[Month]} ${DatE}
 `;
 	screenSaverTime.innerHTML = `
-${Hours} :
+${Hours < 10 ? `0${Hours}` : Hours} :
 ${Minutes < 10 ? `0${Minutes}` : Minutes} :
 ${Seconds < 10 ? `0${Seconds}` : Seconds}
 `;
