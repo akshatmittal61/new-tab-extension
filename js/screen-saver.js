@@ -25,7 +25,6 @@ fullScreenBtn.addEventListener("click", () => {
 });
 
 document.addEventListener("fullscreenchange", () => {
-	console.log("fullscreenchange", screenSaver.classList);
-	screenSaver.classList.toggle("screen-saver-visible");
-	screenSaver.classList.toggle("screen-saver-invisible");
+	screenSaver.classList.toggle("visible");
+	screenSaver.classList.toggle("invisible");
 });

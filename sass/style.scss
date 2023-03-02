@@ -18,28 +18,6 @@
     --tcolor: #333;
     --box-height: 300px;
     --transition-time: 0.3s;
-
-    --red: #f44336;
-    --pink: #e91e63;
-    --purple: #9c27b0;
-    --dark-purple: #673ab7;
-    --indigo: #3f51b5;
-    --blue: #2196f3;
-    --light-blue: #03a9f4;
-    --cyan: #00bcd4;
-    --green: #4caf50;
-    --light-green: #8bc34a;
-    --yellow: #ffeb3b;
-    --orange: #ff9800;
-    --deep-orange: #ff5722;
-    --brown: #795548;
-    --grey: #9e9e9e;
-    --blue-grey: #607d8b;
-
-    --blue: #4285f4;
-    --red: #ea4335;
-    --yellow: #fbbc05;
-    --green: #34a853;
 }
 
 body {
@@ -58,11 +36,24 @@ body {
     height: 100vh;
 }
 
-@import "sass/clock";
-@import "sass/screen-saver";
-@import "sass/search";
-@import "sass/todos";
-@import "sass/weather";
+@import "./presets";
+@import "./popup";
+@import "./clock";
+@import "./screen-saver";
+@import "./search";
+@import "./todos";
+@import "./weather";
+@import "./shortcuts";
+
+.invisible {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
 
 .dispn {
     display: none !important;

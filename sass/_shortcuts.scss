@@ -1,0 +1,145 @@
+@import "mixins";
+
+.add-shortcut {
+    &-btn {
+        @include icon-btn(md);
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+    }
+
+    &-popup-box {
+        width: 550px;
+        height: 350px;
+    }
+
+    &-form {
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-flow: column;
+        margin: 30px 0;
+
+        .form-group {
+            margin-bottom: 6px;
+
+            &-btn {
+                position: absolute;
+                bottom: 16px;
+                right: 16px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+    }
+
+    &-action-btn {
+        all: unset;
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 14px;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 4px;
+        margin: 3px;
+        transition: all 0.3s ease-in-out;
+
+        &-outline {
+            border: 1px solid var(--indigo);
+            color: var(--indigo);
+            background-color: transparent;
+
+            &:hover {
+                background-color: var(--indigo);
+                color: #fff;
+            }
+        }
+
+        &-fill {
+            border: 1px solid var(--indigo);
+            color: #fff;
+            background-color: var(--indigo);
+
+            &:hover {
+                background-color: var(--indigo-700);
+                color: #fff;
+            }
+        }
+    }
+}
+
+.shortcuts-container {
+    width: calc(100% - 128px);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 0 16px 0;
+}
+
+.shortcut {
+    all: unset;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #000;
+    font-size: 16px;
+    line-height: 150%;
+    border-radius: 500px;
+    padding: 4px 10px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    img {
+        width: 20px;
+        height: 20px;
+        border-radius: 500px;
+        margin-right: 4px;
+    }
+
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        width: 32px;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 500px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 5;
+        opacity: 0;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+        font-size: 16px;
+        line-height: 150%;
+        cursor: pointer;
+    }
+
+    &:hover {
+        background: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.25) 0%,
+                rgba(0, 0, 0, 0.65) 100%);
+
+        button {
+            opacity: 1;
+        }
+    }
+}

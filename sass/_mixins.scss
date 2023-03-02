@@ -1,0 +1,58 @@
+@mixin icon-btn($size) {
+    all: unset;
+    box-sizing: border-box;
+
+    @if $size ==sm {
+        width: 24px;
+        height: 24px;
+    }
+
+    @else if $size ==md {
+        width: 32px;
+        height: 32px;
+    }
+
+    @else if $size ==lg {
+        width: 48px;
+        height: 48px;
+    }
+
+    @else {
+        width: 32px;
+        height: 32px;
+    }
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    span {
+        @if $size ==sm {
+            font-size: 16px;
+        }
+
+        @else if $size ==md {
+            font-size: 20px;
+        }
+
+        @else if $size ==lg {
+            font-size: 24px;
+        }
+
+        @else {
+            font-size: 20px;
+        }
+
+        line-height: 150%;
+    }
+}

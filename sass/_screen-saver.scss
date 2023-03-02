@@ -1,24 +1,10 @@
+@import 'mixins';
+
 .full-screen-btn {
-    all: unset;
-    box-sizing: border-box;
+    @include icon-btn(md);
     position: absolute;
     bottom: 16px;
     right: 16px;
-    width: 32px;
-    height: 32px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    cursor: pointer;
-    user-select: none;
-
-    span {
-        font-size: 20px;
-        line-height: 150%;
-    }
 }
 
 .screen-saver {
@@ -27,7 +13,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1000;
     background-color: #000;
     color: #fff;
     display: flex;
@@ -35,16 +21,6 @@
     align-items: center;
     cursor: none;
     transition: all 0.3s ease-in-out;
-
-    &-invisible {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    &-visible {
-        opacity: 1;
-        visibility: visible;
-    }
 
     &-time {
         width: 100vw;
