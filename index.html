@@ -38,11 +38,22 @@
     <div class="todos-container">
         <div class="todos-head">
             <span>To-Do List</span>
-            <button>
+            <button class="todos-add-btn" id="todos-add-btn">
                 <span class="material-symbols-outlined">add</span>
             </button>
         </div>
-        <div class="todos-body"></div>
+        <div class="todos-body">
+            <form class="todo-item todo-form dispn" id="new-todo-form">
+                <div class="todo-item-text">
+                    <input type="text" name="new-todo-input" id="new-todo-input" placeholder="Add new todo" />
+                </div>
+                <button class="todo-item-delete" id="new-todo-item-cancel">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <button type="submit" class="dispn" id="new-todo-item-add"></button>
+            </form>
+            <div class="todos-list"></div>
+        </div>
     </div>
     <div class="add-shortcut-btn">
         <span class="material-symbols-outlined">add</span>
@@ -91,6 +102,7 @@
     <script src="./js/clock.js"></script>
     <script src="./js/screen-saver.js"></script>
     <script src="./js/shortcut.js"></script>
+    <script src="./js/todos.js"></script>
 </body>
 
 </html>

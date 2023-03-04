@@ -87,6 +87,7 @@ const displayShortcuts = (shortcuts) => {
 const addShortcut = (e) => {
 	e.preventDefault();
 	const shortcuts = getShortcuts();
+	if (!shortcutTitleInput.value || !shortcutUrlInput.value) return;
 	shortcuts.push({
 		id: Date.now(),
 		title: shortcutTitleInput.value,
