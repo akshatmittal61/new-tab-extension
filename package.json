@@ -1,12 +1,12 @@
 {
-  "name": "new-tab-chrome-extension",
+  "name": "new-tab-extension",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A extension that replaces the new tab page with a custom page",
+  "main": "app.js",
   "scripts": {
     "start": "sass sass/style.scss:style.css --watch --style compressed --no-source-map"
   },
   "keywords": [],
-  "author": "",
+  "author": "Akshat Mittal",
   "license": "ISC"
 }
