@@ -1,8 +1,8 @@
 const todosContainer = document.querySelector(".todos-list");
 
 const addTodoBtn = document.querySelector("#todos-add-btn");
-const newTodoForm = document.querySelector("#new-todo-form");
-const newTodoInput = document.querySelector("#new-todo-input");
+const newTodoForm = document.querySelector("form#new-todo-form");
+const newTodoInput = document.querySelector("input#new-todo-input");
 const addNewTodoBtn = document.querySelector("#new-todo-item-add");
 const cancelNewTodoBtn = document.querySelector("#new-todo-item-cancel");
 
@@ -56,7 +56,7 @@ const displayTodos = (todos) => {
 
 const addTodo = (todo) => {
 	const todos = getTodos();
-	todos.push({
+	todos.unshift({
 		id: Date.now(),
 		text: todo,
 		completed: false,
