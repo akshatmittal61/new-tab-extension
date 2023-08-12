@@ -15,12 +15,6 @@
         "contextMenus",
         "notifications",
         "alarms",
-        "identity",
-        "identity.email",
-        "identity.read",
-        "identity.launchWebAuthFlow",
-        "identity.profile.emails.read",
-        "identity.profile.read",
-        "identity.profile"
+        "identity"
     ]
 }
