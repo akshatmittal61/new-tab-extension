@@ -4,7 +4,7 @@
   "description": "A extension that replaces the new tab page with a custom page",
   "main": "app.js",
   "scripts": {
-    "start": "sass sass/style.scss:style.css --watch --style compressed --no-source-map"
+    "start": "sass sass/style.scss:style.min.css --watch --style compressed --no-source-map"
   },
   "keywords": [],
   "author": "Akshat Mittal",
