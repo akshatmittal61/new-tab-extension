@@ -1,5 +1,16 @@
 const searchForm = document.querySelector("form.search");
 
+document.addEventListener("keydown", (e) => {
+	const searchInput = searchForm.querySelector("input");
+	console.log(e.key);
+	if (e.key === "/" || (e.ctrlKey && e.key === "k")) {
+		e.preventDefault();
+		searchInput.focus();
+	} else if (document.activeElement === searchInput && e.key === "Escape") {
+		searchInput.blur();
+	}
+});
+
 searchForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const searchInput = searchForm.querySelector("input");
