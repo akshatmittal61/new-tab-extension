@@ -52,7 +52,14 @@
         &-outline {
             border: 1px solid var(--indigo);
             color: var(--indigo);
-            background-color: transparent;
+
+            body.light & {
+                color: var(--indigo);
+            }
+
+            body.dark & {
+                color: var(--white);
+            }
 
             &:hover {
                 background-color: var(--indigo);

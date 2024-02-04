@@ -10,3 +10,13 @@ searchForm.addEventListener("submit", (e) => {
 	else
 		window.location.href = `https://www.google.com/search?q=${searchValue}`;
 });
+
+const currentTime = new Date();
+
+if (currentTime.getHours() >= 20 || currentTime.getHours() < 7) {
+	document.body.classList.add("dark");
+	document.body.classList.remove("light");
+} else {
+	document.body.classList.add("light");
+	document.body.classList.remove("dark");
+}
