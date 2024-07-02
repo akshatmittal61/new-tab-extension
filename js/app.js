@@ -4,8 +4,11 @@ document.addEventListener("keydown", (e) => {
 	const searchInput = searchForm.querySelector("input");
 	console.log(e.key);
 	if (e.key === "/" || (e.ctrlKey && e.key === "k")) {
-		e.preventDefault();
-		searchInput.focus();
+		// if search bar is focused already, skip this
+		if (document.activeElement !== searchInput) {
+			e.preventDefault();
+			searchInput.focus();
+		}
 	} else if (document.activeElement === searchInput && e.key === "Escape") {
 		searchInput.blur();
 	}
